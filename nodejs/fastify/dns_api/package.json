@@ -1,0 +1,14 @@
+{
+  "name": "dns_micro",
+  "version": "1.0.0",
+  "description": "Microservice for DNS lookups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse G",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.18.0"
+  }
+}

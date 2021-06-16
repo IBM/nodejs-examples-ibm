@@ -1,0 +1,8 @@
+#!/QOpenSys/pkgs/bin/bash
+TOLOOKUP="$1"
+DNS_SVR="$2"
+
+if [[ "" == "$2" ]]; then
+	exec curl -w "\n" http://localhost:8088/dns/$1
+fi
+curl -s http://localhost:8088/dns_adv/$TOLOOKUP?dns_server=$DNS_SVR | jq '.[] | select( .address) | select( .type | contains("A")) | .address' | tr -d \"
